@@ -1,0 +1,81 @@
+div.navbar-header{
+    background-color: #FFF;
+    border-radius: 0;
+    font-weight: bold;
+    width: 100%;
+}
+.container .navbar{
+  padding: 0;
+  width: 100%;
+}
+.navbar-nav{
+  display: block;
+  height: 10%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #090; 
+  width: 100%;
+}
+
+.navbar-nav a{
+  width: 150px;
+  float: left;
+  font-style: block;
+  font-size : 20px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.active {
+  background-color: #4CAF50;
+}
+.form-inline{
+  margin-right: 10px;
+}
+.navbar-nav a:hover:not(.active) {
+  background-color: #111;
+}
+.navbar-brand, .navbar-brand:hover{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+ .navbar{
+   padding: 0;
+   margin: 0;
+ }
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+@media (min-width: 992px)
+{
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 100%;
+}
+}
+@media (min-width: 768px)
+{
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 100%;
+}
+}
+@media (min-width: 567px)
+{
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+}
+.btn:hover{
+  background-color: #090;
+}
+#profile{
+  position: relative;
+  align-self: flex-end;
+  color: inherit;
+}
