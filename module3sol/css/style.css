@@ -4,6 +4,9 @@
     border: 2px solid black;
     font-weight: bold;
 }
+.navbar-brand{
+  margin-left: 20px;
+}
 #menu-item-categeoury{
     background-color: dimgray;
     padding: 10px;
