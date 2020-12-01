@@ -6,63 +6,268 @@
     <title>Green Machines</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='css\bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+  
 </head>
-<body>
-    <header>
-        <nav id="header-nav" class="navbar navbar-default fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <div class="navbar navbar-light">
-                        <a class="navbar-brand">
-                          <img src="C:/Users/hai/Pictures/title.png" width="400" height="100" alt="">
-                        </a>
-                        <a id="profile" href="#">
-                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
-                                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-                              </svg>
-                        </a>
-                    </div>
+<body class="overflow-auto">
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar navbar-light">
+            <a class="navbar-brand">
+              <img src="C:/Users/hai/Pictures/title.png" width="400" height="100" alt="">
+            </a>
+            <!-- Large modal -->
+            <button id="profile" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+              </svg>
+            </button>
+            <div class="modal bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="px-4 py-3" onsubmit="return validate()">
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                         Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <a class="dropdown-item" href="#">New around here? Sign up</a>
+                    <a class="dropdown-item" href="#">Forgot password?</a>
+                  </div>
                 </div>
-            </div><!-- .container -->
-          <!--  <div class="container">
-                <div class="navbar">
-                    <a id="search">
-                        <form class="form-inline">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </a>
-                    
-                </div>
-            </div> -->
-            <div class="container">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Plants</a>
-                    <a class="nav-item nav-link" href="#">Tools and Other</a>
-                    <a class="nav-item nav-link" href="#">Offers</a>
-                    <a class="nav-item nav-link" href="#">About</a>
-                </div>
-
+              </div>
             </div>
-        </nav><!-- #header-nav -->
-      
-    </header> 
-    <main>
-        <div class="maincontent">
-            <div class="col-lg-4 col-md-3 col-sm-1">
-                
-
-            </div>
-
+          </div>
         </div>
-    </main>
+      </div><!-- .container -->
+      <div class="container">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Combos</a>
+          <a class="nav-item nav-link" href="#">Offers</a>
+          <a class="nav-item nav-link" href="#">About</a>
+        </div>
+      </div>
+    </nav><!-- #header-nav -->
+  </header>
+  <div id="main-content" class="container">
+    <div id="cust-view" class="row">
+      <div id="filters" class="col-6 col-md-3">
+        <h5 class="font-weight-bold mb-3">Filters</h5>
+        <div class="mb-4">
+          <a id="search">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </a>                  
+        </div>
+        <div class="mb-4">
+
+          <h6 class="font-weight-bold mb-3">Avg. Customer Review</h6>
     
+          <a href="#!">
+            <ul class="rating">
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+              </li>
+            </ul>
+          </a>
+          <br>
+          <a href="#!">
+            <ul class="rating">
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+              </li>
+            </ul>
+          </a>
+          <br>
+          <a href="#!">
+            <ul class="rating">
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+              </li>
+            </ul>
+          </a>
+          <br>
+          <a href="#!">
+            <ul class="rating">
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-primary"></i>
+              </li>
+              <li>
+                <i class="fa fa-star fa-sm text-sucess"></i>
+              </li>
+              <li>
+                <p class="small text-uppercase card-link-secondary px-2">& Up</p>
+              </li>
+            </ul>
+          </a>
+          <br>
+        </div>
+        <div class="mb-4">
+
+          <h6 class="font-weight-bold mb-3">Price</h6>
+    
+          <div class="form-check pl-0 mb-3 price">
+            <input type="radio" class="form-check-input" id="under100" name="materialExampleRadios">
+            <label class="form-check-label small text-uppercase card-link-secondary" for="under100">Under Rs.100</label>
+          </div>
+          <div class="form-check pl-0 mb-3">
+            <input type="radio" class="form-check-input" id="100300" name="materialExampleRadios">
+            <label class="form-check-label small text-uppercase card-link-secondary" for="100300">Rs.100 to Rs.300</label>
+          </div>
+          <div class="form-check pl-0 mb-3">
+            <input type="radio" class="form-check-input" id="300500" name="materialExampleRadios">
+            <label class="form-check-label small text-uppercase card-link-secondary" for="300500">Rs.300 to Rs.500</label>
+          </div>
+          <div class="form-check pl-0 mb-3">
+            <input type="radio" class="form-check-input" id="above500" name="materialExampleRadios">
+            <label class="form-check-label small text-uppercase card-link-secondary" for="above500">above Rs.500</label>
+          </div>    
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-9">
+        <div class="row">
+          <div class="col-6 col-lg-4 col-md-6 col-sm-12">
+            <a href="Indoor.html">
+              <div class="category-tile-1">
+                <img class="image1"  width="200" height="200" src="images/indoor_plant(200X200).jpg" alt=""><br>
+                <span>Indoor Plants</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-4 col-md-6 col-sm-12">
+            <a href="Flowering.html">
+              <div class="category-tile-1">
+                <img class="image1" width="200" height="200" src="images/Flowering_plans(200X200).jpg" alt=""><br>
+                <span>Flowering Plants</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-4 col-md-6 col-sm-12">
+            <a href="Desert.html">
+              <div class="category-tile-1">
+                <img class="image1" width="200" height="200" src="images/Catus_plants(200X200).jpg "alt="">
+                <br>
+                <span>Desert Plants</span>
+              </div>
+            </a>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-6 col-lg-4 col-md-6 col-sm-12">
+            <a href="Tools.html">
+              <div class="category-tile-2">
+                <img class="image2"  width="200" height="200" src="images/tools(250x250).jpg"alt="">
+                <br>
+                <span>Tools</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-4 col-md-6 col-sm-12">
+            <a href="Fertilizers.html">
+              <div class="category-tile-2">
+                <img class="image2" width="200" height="200" src="images/Fertilizers(215X215).jpg" alt=""><br>
+                <span>Fertilizers</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-4 col-md-6 col-sm-12">
+            <a href="Seeds.html">
+              <div class="category-tile-2">
+                <img class="image2" width="200" height="200" src="Images/Seeds.webp"alt="">
+                <br>
+                <span>Seeds</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 </body>
 </html>
