@@ -146,3 +146,20 @@ div.navbar-header{
 .price{
   padding-left: 10px;
 }
+#maindistributor{
+ border : 1px solid green;
+ box-shadow: 0 1px 5px 1px grey;
+ margin-left: 15px;
+ margin-right: 15px;
+ margin-bottom: 15px;
+ background-color: #4CAF50;
+}
+.category-tile-3 { 
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 450px;
+  margin:0 auto 15px;
+  border: 1px solid black;
+  background: white;
+}
